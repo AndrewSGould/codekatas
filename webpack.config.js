@@ -1,6 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
-const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
   module: {
