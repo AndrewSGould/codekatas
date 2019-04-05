@@ -1,4 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const DashboardPlugin = require("webpack-dashboard/plugin");
+
 module.exports = {
   module: {
     rules: [
@@ -16,6 +19,18 @@ module.exports = {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          "style-loader",
+          "css-loader?modules&camelCase&localIdentName=[path]__[name]__[local]--[hash:base64:5]",
+          "stylus-loader"
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
@@ -23,6 +38,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin()
   ]
 };

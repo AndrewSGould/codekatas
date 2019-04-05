@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./input.styl";
 
 const Input = ({ label, text, type, id, value, handleChange }) => (
   <div className="form-group">
@@ -14,6 +15,7 @@ const Input = ({ label, text, type, id, value, handleChange }) => (
     />
   </div>
 );
+
 Input.propTypes = {
   label: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
