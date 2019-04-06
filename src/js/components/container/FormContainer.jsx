@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
+import Button from "@material-ui/core/Button";
 
 class FormContainer extends Component {
   constructor() {
@@ -27,6 +28,9 @@ class FormContainer extends Component {
           value={seo_title}
           handleChange={this.handleChange}
         />
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
       </form>
     );
   }
