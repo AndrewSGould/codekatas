@@ -1,4 +1,4 @@
 import "normalize.css";
 import "./global.styl";
 
-import FormContainer from "./js/components/container/FormContainer.jsx";
+import AppContainer from "./js/components/container/AppContainer.jsx";
