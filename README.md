@@ -1,2 +1,1 @@
-# andrewg-site
-Personal Website and Blog
+# Code Kata blog

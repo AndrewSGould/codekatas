@@ -1,11 +1,13 @@
 {
-  "name": "andrewg-site",
+  "name": "andrewg-kata",
   "version": "1.0.0",
-  "description": "Personal Website and Blog",
+  "description": "Personal practice",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2"
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -16,10 +18,6 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
@@ -34,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndrewSGould/andrewg-site.git"
+    "url": "git+https://github.com/AndrewSGould/codekatas.git"
   },
   "keywords": [],
   "author": "Andrew S Gould",
@@ -42,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/AndrewSGould/andrewg-site/issues"
   },
-  "homepage": "https://github.com/AndrewSGould/andrewg-site#readme"
+  "homepage": "https://github.com/AndrewSGould/codekatas#readme"
 }
