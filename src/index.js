@@ -1,4 +1,4 @@
 import "normalize.css";
 import "./global.styl";
 
-import AppContainer from "./js/components/app/App.jsx";
+import App from "./js/components/App.jsx";
