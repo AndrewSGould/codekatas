@@ -6,6 +6,10 @@ class FizzBuzz extends Component {
     this.state = {
       input: Array.apply(null, { length: 101 }).map(Number.call, Number)
     };
+
+    this.fizzles = this.state.input.map((item, key) => (
+      <li key={key}>{this.fizzbuzz(item)}</li>
+    ));
   }
 
   fizzbuzz = value => {
@@ -19,11 +23,7 @@ class FizzBuzz extends Component {
   };
 
   render() {
-    return this.state.input.map(item => (
-      <ul>
-        <li>{this.fizzbuzz(item)}</li>
-      </ul>
-    ));
+    return <ul>{this.fizzles}</ul>;
   }
 }
 

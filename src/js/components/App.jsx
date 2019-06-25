@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import KarateChop from "./karate-chop/KarateChop.jsx";
 import FizzBuzz from "./fizzbuzz/FizzBuzz.jsx";
+import DataMunging from "./data-munging/DataMunging.jsx";
 
 class App extends Component {
   render() {
@@ -10,8 +11,7 @@ class App extends Component {
       <>
         <noscript>You need to enable Javascript to run this website!</noscript>
         <main>
-          <KarateChop />
-          <FizzBuzz />
+          <DataMunging />
         </main>
         <footer />
       </>
