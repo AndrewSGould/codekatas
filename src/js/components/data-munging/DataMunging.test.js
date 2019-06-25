@@ -8,4 +8,8 @@ describe("<DataMunging /> functions", () => {
     const wrapper = renderer.create(<DataMunging />);
     inst = wrapper.getInstance();
   });
+
+  it("test suite must contain one test", () => {
+    expect(true).toEqual(true);
+  });
 });

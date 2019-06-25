@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import KarateChop from "./karate-chop/KarateChop.jsx";
+import FizzBuzz from "./fizzbuzz/FizzBuzz.jsx";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <noscript>You need to enable Javascript to run this website!</noscript>
         <main>
           <KarateChop />
+          <FizzBuzz />
         </main>
         <footer />
       </>
