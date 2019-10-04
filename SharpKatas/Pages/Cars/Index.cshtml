@@ -1,0 +1,66 @@
+﻿@page
+@model SharpKatas.Pages.Cars.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].BodyStyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Layout)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var car in Model.Car) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => car.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.BodyStyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Layout)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@car.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@car.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@car.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

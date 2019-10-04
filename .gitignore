@@ -1,2 +1,8 @@
 node_modules
 dist/
+*.dll
+SharpKatas/wwwroot/lib/*
+SharpKatas/obj/*
+bin/*
+*/bin/*
+SharpKatas/.vs/*
