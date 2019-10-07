@@ -10,6 +10,19 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        Class:
+        <select asp-for="CarClass" asp-items="Model.Class">
+            <option value="">All</option>
+        </select>
+        <br />
+        Car: <input type="text" asp-for="UserSearch" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -30,6 +43,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Car[0].Layout)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Engine)
             </th>
             <th></th>
         </tr>
@@ -54,6 +70,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => car.Layout)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Engine)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@car.Id">Edit</a> |

@@ -31,13 +31,21 @@ namespace SharpKatas.Pages.Cars
 
         public async Task OnGetAsync()
         {
+            var carClassQuery = _context.Car.Select(x => x.Class);
+
             var cars = _context.Car.AsQueryable();
             
             if (!string.IsNullOrEmpty(UserSearch))
             {
-                cars = cars.Where(car => car.Class.Contains(UserSearch));
+                cars = cars.Where(car => car.Model.Contains(UserSearch));
             }
 
+            if (!string.IsNullOrEmpty(CarClass))
+            {
+                cars = cars.Where(x => x.Class == CarClass);
+            }
+
+            Class = new SelectList(await carClassQuery.Distinct().ToListAsync());
             Car = await cars.ToListAsync();
         }
     }

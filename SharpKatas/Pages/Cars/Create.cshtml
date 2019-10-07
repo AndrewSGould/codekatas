@@ -44,6 +44,11 @@
                 <span asp-validation-for="Car.Layout" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Car.Engine" class="control-label"></label>
+                <input asp-for="Car.Engine" class="form-control" />
+                <span asp-validation-for="Car.Engine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
