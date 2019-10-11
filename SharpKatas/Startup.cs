@@ -22,11 +22,6 @@ namespace SharpKatas
         {
             services.AddRazorPages();
 
-            //services.AddMvc().AddRazorPagesOptions(options =>
-            //{
-            //    options.Conventions.AddPageRoute("/Cars/Index", "");
-            //});
-
             services.AddDbContext<CarContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CarContext")));
         }
